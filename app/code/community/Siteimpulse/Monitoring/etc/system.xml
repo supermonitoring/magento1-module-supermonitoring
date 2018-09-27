@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <siteimpulse translate="label">
+            <label>Super Monitoring</label>
+            <sort_order>170</sort_order>
+        </siteimpulse>
+    </tabs>
+    <sections>
+        <monitoring translate="label" module="monitoring">
+            <label>Settings</label>
+            <tab>siteimpulse</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label comment">
+                    <label>General</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment></comment>
+                    <fields>
+                        <info translate="label">
+                            <frontend_model>monitoring/adminhtml_system_config_info</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </info>
+                        <active translate="label comment">
+                            <label>Status</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <token translate="label comment">
+                            <depends>
+                                <active>1</active>
+                            </depends>
+                            <label>Authorization token</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>monitoring/system_config_token</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[You can find the token in your Account Settings at <a href='https://www.supermonitoring.com' target='_blank'>www.supermonitoring.com</a>.]]></comment>
+                        </token>
+                    </fields>
+                </general>
+            </groups>
+        </monitoring>
+    </sections>
+</config>

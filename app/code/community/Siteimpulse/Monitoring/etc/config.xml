@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Siteimpulse_Monitoring>
+            <version>0.1.0</version>
+        </Siteimpulse_Monitoring>
+    </modules>
+    <admin>
+        <routers>
+		<monitoring>
+			<use>admin</use>
+			<args>
+				<module>Siteimpulse_Monitoring</module>
+				<frontName>monitoring</frontName>
+			</args>
+		</monitoring>
+        </routers>
+    </admin>
+    <adminhtml>
+		<menu>
+			<report translate="title" module="reports">
+				<children>
+					<monitoring translate="title" module="monitoring">
+						<depends>
+							<config>monitoring/general/token</config>
+						</depends>
+						<title>Super Monitoring</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<items translate="title" module="monitoring">
+								<title>Your Checks</title>
+								<sort_order>0</sort_order>
+								<action>monitoring/adminhtml_monitoring</action>
+							</items>
+						</children>
+						<children>
+							<account translate="title" module="monitoring">
+								<title>Your Account</title>
+								<sort_order>1</sort_order>
+								<action>monitoring/adminhtml_monitoring/account</action>
+							</account>
+						</children>
+						<children>
+							<contact translate="title" module="monitoring">
+								<title>Your Contacts</title>
+								<sort_order>2</sort_order>
+								<action>monitoring/adminhtml_monitoring/contact</action>
+							</contact>
+						</children>
+					</monitoring>
+				</children>
+			</report>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Siteimpulse_Monitoring>
+							<title>Monitoring Module</title>
+							<sort_order>10</sort_order>
+						</Siteimpulse_Monitoring>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<monitoring>
+					<file>monitoring.xml</file>
+				</monitoring>
+			</updates>
+		</layout>
+		<translate>
+            <modules>
+                <Siteimpulse_Monitoring>
+                    <files>
+                        <default>SiteimpulseMonitoring.csv</default>
+                    </files>
+                </Siteimpulse_Monitoring>
+            </modules>
+        </translate>
+    </adminhtml>   
+    <global>
+        <models>
+            <monitoring>
+                <class>Siteimpulse_Monitoring_Model</class>
+            </monitoring>
+        </models>
+        <blocks>
+            <monitoring>
+                <class>Siteimpulse_Monitoring_Block</class>
+            </monitoring>
+        </blocks>
+        <helpers>
+            <monitoring>
+                <class>Siteimpulse_Monitoring_Helper</class>
+            </monitoring>
+        </helpers>
+    </global>
+</config>

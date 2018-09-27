@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+    <name>Siteimpulse_Monitoring</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>OSL v3.0</license>
+    <channel>local</channel>
+    <extends/>
+    <summary>Monitor your website uptime and basic functions with www.supermonitoring.com and access your reports and settings directly in your Magento Admin panel.</summary>
+    <description>Super Monitoring is an external web application for monitoring website uptime and its basic functions.  &#xD;
+This Module integrates Super Monitoring interface into Magento administration panel so you don't have to log in to supermonitoring.com separately to see your reports or update settings.</description>
+    <notes>The first public version.</notes>
+    <authors><author><name>siteimpulse</name><user>siteimpulse</user><email>k.caban@siteimpulse.com</email></author></authors>
+    <date>2018-09-15</date>
+    <time>08:47:18</time>
+    <contents><target name="magelocal"><dir name="Siteimpulse"><dir name="Monitoring"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Config"><file name="Info.php" hash="3daad14aabd09ef60bc023db723329e3"/></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="584fe40d1b6021b44905bccbeae23276"/></dir><dir name="Model"><file name="Monitoring.php" hash="adf970c75d5dbef002ab8ff8b6fb2bb6"/><dir name="System"><dir name="Config"><file name="Token.php" hash="9561aa7b153be7001be511942d53d3d2"/></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="MonitoringController.php" hash="8bce778036d84fa4ad7a839844594599"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="00cfe0ba1b3ebc59f4fbf3e72d6bf331"/><file name="config.xml" hash="c9ad23bec0267d82793f2b650e497b86"/><file name="system.xml" hash="7f2f28d3f1dd1d926d343f1b91118cbc"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Siteimpulse_Monitoring.xml" hash="9128092e38a4b554b539a67fded40a3f"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="monitoring.xml" hash="cfd2a28c49fefb80853c0ac1dc0f68fc"/></dir><dir name="template"><dir name="monitoring"><file name="account.phtml" hash="9983480c00e3bd90cd2f1818c04edbdf"/><file name="check.phtml" hash="dd4ebc4c7eaa693587de8bfbfb2c422c"/><file name="contact.phtml" hash="f244e9db968553baf0fe24684da34046"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>7.1.0</max></php></required></dependencies>
+</package>

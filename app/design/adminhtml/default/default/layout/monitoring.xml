@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <monitoring_adminhtml_monitoring_index>
+	<reference name="head">
+            <action method="setTitle"><title>Super Monitoring</title></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="monitoring-check" template="monitoring/check.phtml"/>
+        </reference>
+    </monitoring_adminhtml_monitoring_index>
+	
+    <monitoring_adminhtml_monitoring_account>
+	<reference name="head">
+            <action method="setTitle"><title>Super Monitoring</title></action>
+        </reference>
+        <reference name="content">
+             <block type="core/template" name="monitoring-account" template="monitoring/account.phtml"/> 
+        </reference>
+    </monitoring_adminhtml_monitoring_account>
+	<monitoring_adminhtml_monitoring_contact>
+	<reference name="head">
+            <action method="setTitle"><title>Super Monitoring</title></action>
+        </reference>
+        <reference name="content">
+        	<block type="core/template" name="monitoring-contact" template="monitoring/contact.phtml"/>    
+        </reference>
+    </monitoring_adminhtml_monitoring_contact>
+</layout>
